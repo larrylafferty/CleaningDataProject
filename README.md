@@ -10,7 +10,7 @@ training data sets.  The script generates an output file named "Project_Summmary
 
 -- Working directory...folder containing the following files
    "run_analysis.R"
-   "Project_Summary_data.txt" (output file)
+   "ProjectSummaryOut.txt" (output file)
    
    -- UCI HAR Dataset...subfolder containing the following file
       "features.txt" file 
@@ -34,4 +34,4 @@ training data sets.  The script generates an output file named "Project_Summmary
 1. In an R console, type  library(dplyr)
 2. Source the file "run_analysis.R" from the working directory
 2. Type  run_analysis()
-3. Results are stored in "Project_Summary_data.txt"
+3. Results are stored in "ProjectSummaryOut.txt"
