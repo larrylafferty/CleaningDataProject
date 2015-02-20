@@ -19,7 +19,7 @@ training data sets.  The script generates an output file named "Project_Summmary
     "y_train.txt"
             
 ## Package dependencies
-1. dplyr package
+1. dplyr package 
 
 ## Execution instructions
 1. In an R console, type  library(dplyr)
