@@ -8,7 +8,7 @@ available in the file named "CodeBook_Getting_and_Cleaning_Data.md"
 The run_analysis() script requires data from the UCI HAR dataset, including both the test and
 training data sets.  The script generates an output file named "ProjectSummaryOut.txt" which is written to the working directory.  The script assumes that the data are located in subdirectories as follows:
 
--- Working directory...folder containing the following files
+-- Working directory folder containing the following files
    "run_analysis.R"
    "ProjectSummaryOut.txt" (output file)
    "subject_test.txt"
