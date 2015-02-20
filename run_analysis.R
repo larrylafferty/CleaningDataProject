@@ -62,7 +62,8 @@ mergeSubMeasures <- function(measuresFile, subFile, activityFile, featList) {
   sTable <- read.table(subFile, header=FALSE)
   aList <- read.csv(activityFile, header=FALSE)
   # browser()
-  # Create the activity table and label it
+  # Create the activity table and label it.  Note that activities are specified in a file,
+  #  but for this project we simply hard-code the list
   activities <- c("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING")
   activitiesReadable <- (sapply(aList, function(x) activities[x]))
   

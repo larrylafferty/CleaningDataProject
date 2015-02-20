@@ -11,21 +11,12 @@ training data sets.  The script generates an output file named "Project_Summmary
 -- Working directory...folder containing the following files
    "run_analysis.R"
    "ProjectSummaryOut.txt" (output file)
-   
-   -- UCI HAR Dataset...subfolder containing the following file
-      "features.txt" file 
-       
-        -- test...subfolder containing the following files
-            "subject_test.txt"
-            "activity_labels"
-            "X_test.txt"
-            "y_test.txt"
-            
-        -- train...subfolder containing the following files
-            "subject_train.txt"
-            "activity_labels"
-            "X_train.txt"
-            "y_train.txt"
+   "subject_test.txt"
+   "X_test.txt"
+   "y_test.txt"
+   "subject_train.txt"
+    "X_train.txt"
+    "y_train.txt"
             
 ## Package dependencies
 1. dplyr package
