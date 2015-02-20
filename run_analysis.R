@@ -4,29 +4,28 @@
 #
 # The run_analysis function reads smartphone activity data from the UCI HAR dataset and generates
 #  summary 'mean' and 'std' values by subject and activity.  See the files "README.md" and
-#  "CodeBook_Getting_and_Cleaning_data.md".  Results are written to "Project_Summayr_data.txt"
+#  "CodeBook_Getting_and_Cleaning_data.md".  Results are written to "ProjectSummaryOut.txt"
 #  in the working dirctory.
 #
 #  The dplyr package is a dependency
 
+library(dplyr)
 run_analysis <- function() {
   
   # 
   # Get the features first
-  featNames <- read.csv("./UCI HAR Dataset/features.txt", sep="", header=FALSE, stringsAsFactors=FALSE)
-  # Extract the feature names and replace "- , ( )" with "_" since dplyr seems to die  otherwise
+  featNames <- read.csv("features.txt", sep="", header=FALSE, stringsAsFactors=FALSE)
   featList <- featNames[, "V2"]
   #
   # Read the data and build a single, labeled, merged data table (dTable1_2)
   # 
-  # gsub("[( | )]", "_", source)
-  dTable1 <- mergeSubMeasures("./UCI HAR Dataset/test/X_test.txt", 
-                              "./UCI HAR Dataset/test/subject_test.txt",
-                              "./UCI HAR Dataset/test/y_test.txt",
+  dTable1 <- mergeSubMeasures("X_test.txt", 
+                              "subject_test.txt",
+                              "y_test.txt",
                               featList)
-  dTable2 <- mergeSubMeasures("./UCI HAR Dataset/train/X_train.txt", 
-                              "./UCI HAR Dataset/train/subject_train.txt",
-                              "./UCI HAR Dataset/train/y_train.txt",
+  dTable2 <- mergeSubMeasures("X_train.txt", 
+                              "subject_train.txt",
+                              "y_train.txt",
                               featList)
   dTable1_2 <- rbind(dTable1, dTable2)
   # 
