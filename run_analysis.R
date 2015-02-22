@@ -15,7 +15,8 @@ run_analysis <- function() {
   # 
   # Get the features first
   featNames <- read.csv("features.txt", sep="", header=FALSE, stringsAsFactors=FALSE)
-  featList <- featNames[, "V2"]
+  tempList <- featNames[, "V2"]
+  featList <- gsub("_", "", tempList)
   #
   # Read the data and build a single, labeled, merged data table (dTable1_2)
   # 
